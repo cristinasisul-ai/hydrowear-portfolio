@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Cristina Sisul - HydroWear</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+       <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+
+        /* --- HEADER (LOGO) --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem 6%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            height: 95px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+       
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+logo img {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+}
+
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;}
+        nav a {  text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase; }
+       
+        /* --- SECCIÓN 1: PORTADA --- */
+        #inicio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 180px 5% 40px;
+            box-sizing: border-box;
+            background-color: #fff;
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cpath fill='none' stroke='%23d1e8ed' stroke-width='2' d='M800,100 C700,150 650,250 750,350 C850,450 800,550 700,600'/%3E%3Cpath fill='none' stroke='%23d1e8ed' stroke-width='2' d='M800,200 C650,250 600,400 750,550 C850,650 800,750 700,800'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 50% auto;
+        }
+
+        .datos-tabla {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+            color: #000;
+            margin-top: 60px;
+            margin-left: auto;
+        }
+        .datos-tabla td { padding-bottom: 10px; vertical-align: top; }
+        .etiqueta { padding-right: 20px; color: #333; font-weight: bold; }
+
+        /* --- SECCIÓN 2: COLECCIÓN GENERAL --- */
+        #coleccion {
+            padding: 80px 10%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .texto-coleccion h2 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .texto-coleccion h3 {
+            font-size: 1.3rem;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .galeria-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            margin: 0 auto 50px auto;
+            max-width: 900px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .galeria-item { flex: 1; }
+
+        .galeria-item img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- SECCIÓN 3: COLECCIÓN MUJER (NUEVO ARREGLADO) --- */
+        #mujer {
+            padding: 80px 20px; /* Padding ajustado */
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ESTO CENTRA TODO */
+        }
+
+        #mujer h2 {
+            font-size: 1.6rem; /* Igual que Sección 2 */
+            margin: 0 0 10px 0;
+            color: #333;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        #mujer h3 {
+            font-size: 1.3rem; /* Igual que Sección 2 */
+            color: #666;
+            margin: 0 0 50px 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Contenedor de fotos mujer - Ajustado para que no sea gigante */
+        .galeria-doble {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            max-width: 750px; /* Ancho controlado */
+            width: 100%;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .galeria-doble img {
+            width: 48%; /* Casi la mitad para que entren dos */
+            height: 350px; /* Altura controlada */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-doble img:hover {
+            transform: scale(1.02);
+        }
+
+        /* --- BOTONES Y PIE --- */
+        .btn-comprar {
+            display: inline-block;
+            padding: 15px 60px;
+            background-color: #39a9c3;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(57, 169, 195, 0.4);
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+        }
+        .btn-comprar:hover {
+            background-color: #2f8a9e;
+            transform: translateY(-2px);
+        }
+
+        .nota-pie {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+/* --- SECCIÓN 4: HOMBRE --- */
+        #hombre {
+            padding: 80px 20px;
+            background-color: #f9f9f9; /* Un gris muy suave para diferenciar de la sección anterior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #hombre h2 {
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
+            color: #333;
+            font-weight: normal;
+        }
+
+        #hombre h3 {
+            font-size: 1.3rem;
+            color: #666;
+            margin: 0 0 40px 0;
+            font-weight: 300;
+        }
+
+        /* Contenedor para la imagen única de hombre */
+        .galeria-centro {
+            max-width: 500px; /* Tamaño controlado para que no se vea gigante */
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .galeria-centro img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-centro img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Reutilizamos estilos de botones y nota al pie,
+           pero nos aseguramos que en #hombre se comporten bien */
+        #hombre .btn-comprar {
+            text-align: center;
+        }
+       
+        #hombre .nota-pie {
+            text-align: center;
+        }
+
+        /* --- RESPONSIVE (CELULAR) --- */
+        @media (max-width: 850px) {
+            #inicio { flex-direction: column; text-align: center; padding-top: 140px; }
+            div[style*="padding-left"] { padding-left: 0 !important; padding-top: 30px; }
+            header { position: relative; flex-direction: column; gap: 10px; padding: 1rem;}
+            #inicio { background-size: 100% auto; background-position: top center; }
+            .datos-tabla { margin: 40px auto 0; text-align: left; }
+            .logo img { height: 100px; }
+           
+            /* Ajustes Galerías Celular */
+            .galeria-grid { flex-direction: column; }
+            .galeria-item img { height: auto; max-height: 400px; }
+           
+            .galeria-doble img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+/* --- SECCIÓN 5: NIÑOS --- */
+        #ninos {
+            padding: 80px 20px;
+            background-color: #fff; /* Fondo blanco para alternar */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrado */
+            text-align: center;
+        }
+
+        #ninos h2 {
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
+            color: #333;
+            font-weight: normal;
+        }
+
+        #ninos h3 {
+            font-size: 1.3rem;
+            color: #666;
+            margin: 0 0 50px 0;
+            font-weight: 300;
+        }
+
+        /* Nota: Reutilizaremos la clase .galeria-doble que ya creamos para Mujer,
+           así las fotos se verán igual de bien. */
+       
+        #ninos .btn-comprar {
+            text-align: center;
+        }
+        /* --- SECCIÓN 6: LO MÁS VENDIDO (BEST SELLERS) --- */
+        #bestsellers {
+            padding: 60px 20px;
+            background-color: #f0f8fa; /* Un color celestito muy suave para destacar */
+            text-align: center;
+        }
+
+        #bestsellers h2 {
+            font-size: 1.8rem;
+            color: #39a9c3; /* Usamos el color de la marca para el título */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .grid-ventas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta de producto individual */
+        .producto-card {
+            background: white;
+            border-radius: 10px;
+            width: 250px; /* Tarjetas más angostas */
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+
+        .producto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+         .producto-card img.ajuste-foto-ninos {
+            object-position: center 20%;
+        }
+        }
+
+        .producto-info h4 {
+            margin: 10px 0 5px 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .precio {
+            color: #39a9c3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        #ninos .nota-pie {
+            text-align: center;
+        }
+/* --- SECCIÓN 7: PRODUCTO DESTACADO (El diseño detallado) --- */
+        #destacado {
+            padding: 80px 10%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px; /* Espacio entre foto y texto */
+        }
+
+        .img-destacada {
+            flex: 1; /* Ocupa mitad del espacio */
+            max-width: 400px;
+        }
+
+        .img-destacada img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-destacada {
+            flex: 1; /* Ocupa la otra mitad */
+            text-align: left; /* Texto alineado a la izquierda como tu imagen */
+        }
+
+        .info-destacada h2 {
+            font-family: 'Times New Roman', serif; /* Tipografía elegante */
+            font-size: 2.5rem;
+            color: #331f1f; /* Un tono oscuro elegante */
+            margin-bottom: 20px;
+        }
+
+        .info-destacada p {
+            font-size: 1rem;
+            line-height: 1.6; /* Para que se lea bien el párrafo largo */
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify; /* Texto justificado para que quede bloque */
+        }
+
+        /* Responsive: En celular poner uno arriba del otro */
+        @media (max-width: 850px) {
+            #destacado { flex-direction: column; text-align: center; }
+            .info-destacada { text-align: left; } /* O center si prefieres */
+        }
+/* --- SECCIÓN 8: MANIFIESTO FAMILIA (CIERRE) --- */
+     
+        #familia {
+            padding: 80px 10%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .familia-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .familia-info h2 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .familia-info p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* --- BOTÓN UNIFICADO TURQUESA --- */
+        .btn-comprar-familia {
+            background-color: #4fb3c9; /* Turquesa de tu diseño */
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 12px; /* Redondeado igual a tus otros botones */
+            font-size: 1.1rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+        }
+
+        .btn-comprar-familia:hover {
+            background-color: #39a9c3;
+            transform: translateY(-2px);
+        }
+
+        .familia-img {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .familia-img img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 850px) {
+            #familia {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .familia-info {
+                text-align: center;
+            }
+        }
+/* --- SECCIÓN 10: PIE DE PÁGINA (FOOTER) --- */
+        footer {
+            padding: 60px 10% 20px;
+            background-color: #ffffff;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .footer-logo span {
+            color: #39a9c3; /* El celeste de tu marca */
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #666;
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+        }
+
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .footer-note {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { flex-direction: column; align-items: center; }
+        }
+/* --- SECCIÓN DOCUMENTACIÓN DETALLADA --- */
+    .seccion-documentacion {
+        padding: 60px 10%;
+        background-color: #fcfcfc;
+        font-family: 'Arial', sans-serif;
+    }
+    .seccion-documentacion h2 {
+        text-align: center;
+        color: #2c3e50;
+        font-family: 'Times New Roman', serif;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    .grid-prompts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+.card-prompt {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid #4eb1c1; /* Color celeste de tus títulos */
+    text-align: center;
+    max-width: 300px;
+}
+
+.card-title {
+    color: #4eb1c1;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.prompt-text {
+    font-style: italic;
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-usage {
+    font-size: 0.8rem;
+    color: #333;
+    margin-top: 15px;
+}
+    .card-prompt {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        border-top: 4px solid #39a9c3;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .card-prompt h4 {
+        color: #39a9c3;
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+    .card-prompt p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #555;
+    }
+    .prompt-text {
+        background: #f0f4f5;
+        padding: 10px;
+        border-radius: 5px;
+        font-style: italic;
+        display: block;
+        margin: 10px 0;
+    }
+    .resumen-marca {
+        margin-top: 50px;
+        background: #2c3e50;
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+    }
+    .resumen-marca h3 { color: #39a9c3; }
+
+    /* --- 3. SECCIÓN DOCUMENTACIÓN E IA (EL TEXTO QUE ME MOSTRASTE) --- */
+    .seccion-documentacion { padding: 60px 10%; background-color: #fcfcfc; }
+    
+    .seccion-herramientas {
+        background: #fdfdfd;
+        padding: 60px 40px;
+        border-radius: 15px;
+        border: 1px solid #e0e6e8;
+        margin: 50px auto;
+        max-width: 1000px;
+    }
+
+    .tabla-herramientas { display: flex; flex-direction: column; gap: 12px; }
+
+    .herramienta-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        border-left: 4px solid #39a9c3;
+    }
+
+    .herramienta-item strong { color: #39a9c3; min-width: 220px; font-size: 1.1rem; }
+
+    /* GRID DE PROMPTS */
+    .grid-prompts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .card-prompt {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        border-top: 6px solid #39a9c3;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        text-align: left;
+    }
+
+    .card-prompt h4 { color: #39a9c3; font-size: 1.1rem; margin-bottom: 10px; }
+
+    /* --- 4. HEADER Y BOTONES --- */
+    header { background-color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+    .logo img { height: 120px; width: auto; }
+
+    .btn-comprar, .btn-comprar-familia {
+        display: inline-block;
+        padding: 15px 50px;
+        background-color: #39a9c3;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+        .galeria-doble img, .herramienta-item { width: 100%; flex-direction: column; align-items: flex-start; }
+        .grid-prompts { grid-template-columns: 1fr; }
+    }
+
+           
+
+
+        /* Tarjeta de producto individual */
+        .producto-card {
+            background: white;
+            border-radius: 10px;
+            width: 250px; /* Tarjetas más angostas */
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+
+        .producto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+         .producto-card img.ajuste-foto-ninos {
+            object-position: center 20%; 
+        }
+        }
+
+        .producto-info h4 {
+            margin: 10px 0 5px 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .precio {
+            color: #39a9c3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        #ninos .nota-pie {
+            text-align: center;
+        }
+/* --- SECCIÓN 7: PRODUCTO DESTACADO (El diseño detallado) --- */
+        #destacado {
+            padding: 80px 10%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px; /* Espacio entre foto y texto */
+        }
+
+        .img-destacada {
+            flex: 1; /* Ocupa mitad del espacio */
+            max-width: 400px; 
+        }
+
+        .img-destacada img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-destacada {
+            flex: 1; /* Ocupa la otra mitad */
+            text-align: left; /* Texto alineado a la izquierda como tu imagen */
+        }
+
+        .info-destacada h2 {
+            font-family: 'Times New Roman', serif; /* Tipografía elegante */
+            font-size: 2.4rem;
+            color: #2c2c2c; 
+            margin-bottom: 20px;
+        }
+
+        .info-destacada p {
+            font-size: 1rem;
+            line-height: 1.6; /* Para que se lea bien el párrafo largo */
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify; /* Texto justificado para que quede bloque */
+        }
+
+        /* Responsive: En celular poner uno arriba del otro */
+        @media (max-width: 850px) {
+            #destacado { flex-direction: column; text-align: center; }
+            .info-destacada { text-align: left; } /* O center si prefieres */
+        }
+/* --- SECCIÓN 8: MANIFIESTO FAMILIA (CIERRE) --- */
+      
+        #familia {
+            padding: 80px 10%;
+            background-color: #f8f9fa; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .familia-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .familia-info h2 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.4rem;
+            color:  #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        .familia-info p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* --- BOTÓN UNIFICADO TURQUESA --- */
+        .btn-comprar-familia {
+            background-color: #4fb3c9; /* Turquesa de tu diseño */
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 12px; /* Redondeado igual a tus otros botones */
+            font-size: 1.1rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+        }
+
+        .btn-comprar-familia:hover {
+            background-color: #39a9c3;
+            transform: translateY(-2px);
+        }
+
+        .familia-img {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .familia-img img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 850px) {
+            #familia { 
+                flex-direction: column; 
+                text-align: center; 
+                padding: 40px 20px;
+            }
+            .familia-info {
+                text-align: center;
+            }
+        }
+/* --- SECCIÓN 10: PIE DE PÁGINA (FOOTER) --- */
+        footer {
+ margin-top: 0; /* lo controlamos desde la sección */
+    padding: 80px 10% 30px;
+    background-color: #ffffff;
+    border-top: 2px solid #e5e5e5;
+    background-color: #fcfcfc;
+           
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .footer-logo span {
+            color: #39a9c3; /* El celeste de tu marca */
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #666;
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+        }
+
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .footer-note {
+              margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    text-align: center;
+
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { flex-direction: column; align-items: center; }
+        }
+/* --- SECCIÓN DOCUMENTACIÓN DETALLADA --- */
+.seccion-documentacion {
+    padding: 60px 10%;
+    background-color: #fcfcfc;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.seccion-documentacion h2 {
+    color: #2c3e50;
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo-herramientas {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.seccion-herramientas {
+    background: #fdfdfd;
+    padding: 60px 40px; 
+    border-radius: 15px;
+    border: 1px solid #e0e6e8;
+    margin: 50px 0;
+}
+
+/* FORZAR TÍTULO PRINCIPAL DE IA - CORREGIDO */
+.seccion-herramientas h3, 
+.titulo-seccion-ia {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 2.9rem !important;   /* 🔥 punto ideal */
+    font-weight: 600 !important;
+    color: #2c2c2c !important;
+
+    text-align: center !important;
+
+    max-width: 720px;               /* evita efecto banner */
+    margin: 0 auto 28px auto !important;
+
+    line-height: 1.15 !important;
+}
+
+/* SUBTITULO PROYECTO */
+.descripcion-proyecto {
+    font-size: 1.4rem !important;
+    color: #555 !important;
+    max-width: 600px;
+    margin: 0 auto 40px auto !important;
+    line-height: 1.6;
+    display: block;
+}
+
+.tabla-herramientas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left; /* Para que los items se alineen bien */
+}
+
+.herramienta-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
+}
+
+.herramienta-item:hover {
+    transform: translateX(10px);
+    border-left: 4px solid #39a9c3;
+}
+
+.herramienta-item strong {
+    color: #39a9c3;
+    min-width: 220px;
+    font-size: 1.1rem;
+}
+
+.herramienta-item span {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* BLOQUE AZUL: Identidad de Marca */
+.resumen-marca {
+    margin: 40px auto;
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.gestion-texto {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* GRID DE PROMPTS */
+.grid-prompts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Tarjetas un poco más anchas */
+    gap: 50px; 
+    padding: 40px 0;
+}
+
+/* TARJETA INDIVIDUAL */
+.card-prompt {
+    background: white;
+    padding: 35px; 
+    border-radius: 15px;
+    border-top: 6px solid #39a9c3; /* Borde más grueso para acompañar letra grande */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULOS (PROMPT 0, 1, etc) */
+.card-prompt h4 {
+    color: #39a9c3;
+    font-size: 1.1rem; /* Aumentamos de 0.85 a 1.1 */
+    margin-bottom: 15px;
+    letter-spacing: 1.2px;
+}
+
+/* EL TEXTO DEL PROMPT (DENTRO DE LA CAJA GRIS) */
+.prompt-text {
+    background: #f8fafb;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1rem; /* Tamaño estándar de lectura (16px aprox) */
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* TEXTOS DE USO Y RECURSOS */
+.card-usage, 
+.card-credits {
+    font-size: 1rem; /* Subimos a 1rem para que no sea letra chica */
+    color: #333;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* TENDENCIA (LA JUSTIFICACIÓN CON BORDE AZUL) */
+.card-justification {
+    border-left: 4px solid #39a9c3; 
+    padding: 15px;
+    background-color: #f0f7f9; /* Un celeste muy suave para que destaque */
+    font-size: 1rem; 
+    margin-top: 20px;
+    font-style: italic;
+}
+.icono-parlante {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(57, 169, 195, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(57, 169, 195, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(57, 169, 195, 0); }
+}  
+    
+    
+/* --- ESTILO AUDIO FLOTANTE --- */
+       
+    .audio-web-pro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.icono-parlante {
+    background: #007bff; /* Color de tu marca */
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.icono-parlante:hover { transform: scale(1.1); }
+
+.controles-ocultos {
+    display: none; /* Se oculta por defecto */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 220px;
+}
+
+.audio-web-pro:hover .controles-ocultos {
+    display: block; /* Aparece al pasar el mouse */
+
+}
+
+
+.audio-flotante audio {
+    height: 30px;
+    width: 200px;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1L9mIvoRDat6sWF6f6mr9CoaVRHN6wZgr&sz=w1000" alt="HydroWear Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div style="flex: 1; text-align: center; padding: 20px; z-index: 2;">
+            <img src="https://drive.google.com/thumbnail?id=1g0CEEt_otc3BSenlJRpvw4-uBRhZDHyu&sz=w1000" 
+                 alt="Modelo HydroWear" 
+                 style="width: 100%; max-width: 500px; height: auto; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+
+        <div style="flex: 1; padding-left: 60px; text-align: left; z-index: 2;">
+            <div style="margin-bottom: 20px;">
+                <h2 style="font-size: 1.6rem; color: #333; margin: 0; font-weight: normal; text-transform: uppercase; letter-spacing: 1px;">PROYECTO HYDROWEAR:</h2>
+                <h1 style="font-size: 2rem; color: #222; margin: 10px 0 0 0; letter-spacing: 0.5px; line-height: 1.3;">
+                    INNOVACIÓN CON INTELIGENCIA<br>ARTIFICIAL GENERATIVA
+                </h1>
+            </div>
+
+            <table class="datos-tabla">
+                <tr><td class="etiqueta">Materia:</td><td>Introducción a la Inteligencia Artificial</td></tr>
+                <tr><td class="etiqueta">Profesor:</td><td>Juan Cruz Alric Cortabarria</td></tr>
+                <tr><td class="etiqueta">Estudiantes:</td><td>Cristina Sisul</td></tr>
+                <tr><td colspan="2" style="text-align: center; padding-top: 15px; font-size: 1.3rem;">2026</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="coleccion">
+        <div class="texto-coleccion">
+            <h2>Resistente al cloro, ajuste perfecto y confort para toda la familia</h2>
+            <h3>Mallas diseñadas para disfrutar en el agua sin preocupaciones</h3>
+        </div>
+
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="https://drive.google.com/thumbnail?id=1oI6hVzp0WmWBYPenhenb_9fpWijVh6lI&sz=w1000" alt="Colección Mujer">
+            </div>
+            <div class="galeria-item">
+                <img src="https://drive.google.com/thumbnail?id=13P01pCJluUulXpYaH8C3dQnzIWczRljb&sz=w1000" alt="Colección Hombre">
+            </div>
+            <div class="galeria-item">
+                <img src="https://drive.google.com/thumbnail?id=1aBDLe2olLiUf3TOEVQMCg5uUYh8dhZ7l&sz=w1000" alt="Colección Niños">
+            </div>
+        </div>
+
+        <a href="#" class="btn-comprar">Comprar</a>
+        <span class="nota-pie">Ver especificaciones técnicas y prompts en la sección de Recursos Utilizados</span>
+    </section>
+
+    <section id="mujer">
+        <h2>Mallas para Mujer</h2>
+        <h3>Diseñadas para acompañar cada movimiento</h3>
+
+        <div class="galeria-doble">
+            <img src="https://drive.google.com/thumbnail?id=1P9fPGHrynOAsBb5gSsHXQq7AZTTNI7nM&sz=w1000" alt="Bikinis Variados">
+            <img src="https://drive.google.com/thumbnail?id=1fj2kRVjvGKBSiVubLAHpA_ysa1v6FdxQ&sz=w1000" alt="Mallas Enterizas">
+        </div>
+
+        <a href="#" class="btn-comprar">Ver colección Mujer</a>
+        
+        <div class="nota-pie">
+            Ver especificaciones técnicas y prompts en la sección de Recursos Utilizados
+        </div>
+    </section>
+<section id="hombre">
+        
+        <h2>Mallas para Hombre</h2>
+        <h3>Pensadas para ofrecer comodidad, resistencia y libertad de movimiento</h3>
+
+        <div class="galeria-centro">
+            <img src="https://drive.google.com/thumbnail?id=1qXHAH5lr0EDJ43fM_obvcADwI2ng3AWn&sz=w1000" alt="Colección Hombre">
+        </div>
+
+        <a href="#" class="btn-comprar">Ver colección Hombre</a>
+
+        <div class="nota-pie">
+            Ver especificaciones técnicas y prompts en la sección de Recursos Utilizados
+        </div>
+
+    </section>
+<section id="ninos">
+       
+        <h2>Mallas para Niños</h2>
+        <h3>Pensadas para jugar, nadar y moverse libremente</h3>
+
+        <div class="galeria-doble">
+            <img src="https://drive.google.com/thumbnail?id=1nsp_H0ZqvHRorNncEgdqXVxB9LZNRtNz&sz=w1000" alt="Niños jugando">
+           
+            <img src="https://drive.google.com/thumbnail?id=1cqXw7NYCgqiABVjrexw9SQrCupnJqNMa&sz=w1000" alt="Colección Niños">
+        </div>
+
+        <a href="#" class="btn-comprar">Ver colección Niños</a>
+
+        <div class="nota-pie">
+            Ver especificaciones técnicas y prompts en la sección de Recursos Utilizados
+        </div>
+
+</section>
+<section id="bestsellers">
+        
+        <h2>🔥 Los Favoritos de la Temporada</h2>
+
+        <div class="grid-ventas">
+            
+           <div class="producto-card">
+                <img src="https://drive.google.com/thumbnail?id=1g0CEEt_otc3BSenlJRpvw4-uBRhZDHyu&sz=w1000" alt="Bikini Hydro-Tech">
+                <div class="producto-info">
+                    <h4>Bikini Hydro-Tech Pro</h4>
+                    <span class="precio">$52.000</span>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="https://drive.google.com/thumbnail?id=13P01pCJluUulXpYaH8C3dQnzIWczRljb&sz=w1000" alt="Jammer Competición">
+                <div class="producto-info">
+                    <h4>Jammer Competición</h4>
+                    <span class="precio">$45.500</span>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img class="ajuste-foto-ninos" src="https://drive.google.com/thumbnail?id=1cqXw7NYCgqiABVjrexw9SQrCupnJqNMa&sz=w1000" alt="Set Diversión Acuática">
+                <div class="producto-info">
+                    <h4>Set Diversión Acuática</h4>
+                    <span class="precio">$38.000</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+<section id="destacado">
+        
+        <div class="img-destacada">
+            <img src="https://drive.google.com/thumbnail?id=1g0CEEt_otc3BSenlJRpvw4-uBRhZDHyu&sz=w1000" alt="Bikini Destacado">
+        </div>
+
+        <div class="info-destacada">
+            <h2>Bikini de dos piezas</h2>
+            
+            <p>
+                Este bikini de dos piezas está pensado para que disfrutes el verano con comodidad, seguridad y estilo. Su diseño moderno realza la figura y permite un calce cómodo, ideal para relajarte bajo el sol o disfrutar de un día activo en la playa o la pileta.
+            </p>
+            <p>
+                Confeccionado en tela suave, liviana y de secado rápido, ofrece una sensación agradable sobre la piel y libertad de movimiento durante todo el día. El top brinda un ajuste firme y confortable, mientras que la bombacha acompaña el cuerpo sin perder comodidad.
+            </p>
+            <p>
+                Versátil y atemporal, este bikini es perfecto para combinar con distintos estilos y convertirse en un básico infaltable de la temporada.
+            </p>
+
+           
+        </div>
+
+    </section>
+<section id="familia">
+        <div class="familia-info">
+            <h2>Colección HydroWear Family</h2>
+            <p>
+                Diseñadas para acompañar cada etapa, nuestras mallas combinan comodidad, resistencia y estilo, para que todos puedan disfrutar del agua sin preocupaciones. 
+                <br><br>
+                Una línea unificada para todas las edades, con el mismo estándar de calidad y diseño, ideal para compartir momentos únicos en la pileta o en la playa.
+            </p>
+           
+            <button class="btn-comprar-familia">Comprar Colección</button>
+        </div>
+
+        <div class="familia-img">
+            <img src="https://drive.google.com/thumbnail?id=1b3ytKrpNVBgDjbvohmiLjqj5-hJlqJaY&sz=w1000" alt="Familia HydroWear">
+        </div>
+    </section>
+    
+    </section>
+    </section>
+<footer>
+        <div class="footer-logo">Hydro<span>Wear</span></div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contacto</h4>
+               <div class="social-icons">
+    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+                <p>Síguenos en nuestras redes</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Teléfono</h4>
+                <p>45781234</p>
+                <p>1577663322</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Email</h4>
+                <a href="mailto:info@misitio.com">info@misitio.com</a>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>Diseño original en Canva | Maquetado final en HTML/CSS con asistencia de IA (Gemini 2026)</p>
+        </div>
+</footer>
+<section id="proceso-ia">
+<h3 class="titulo-seccion-ia">Proceso de Creación con IA y Herramientas Digitales</h3>
+
+<p class="descripcion-proyecto">
+    Este proyecto documenta la integración de IA en el flujo de diseño comercial, desde la conceptualización de marca hasta la <strong>identidad sonora automatizada</strong>.
+</p>
+
+<div class="tabla-herramientas">
+    <div class="herramienta-item">
+        <strong>ChatGPT:</strong> <span>Naming, textos descriptivos y justificación conceptual.</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Gemini:</strong> <span>Asistencia en generación de estructura HTML y adaptación de contenidos.</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Nano Banana:</strong> <span>Generación de imágenes para identidad visual y colecciones (Verano 2026).</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Canva:</strong> <span>Organización visual, jerarquía gráfica y ajustes de presentación.</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Pixabay:</strong> <span>Selección de música de fondo (Lo-fi Tropical) sin distracción.</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Voicemaker (Neural IA):</strong> <span>Generación de voz sintética para el spot de audio UX.</span>
+    </div>
+    <div class="herramienta-item">
+        <strong>Google Drive:</strong> <span>Gestión e inserción de activos (imágenes y audios) mediante IDs.</span>
+    </div>
+</div>
+</section>
+   
+
+    <div class="resumen-marca">
+        <h3>Identidad de Marca: HydroWear</h3>
+        <p><strong>Naming:</strong> Creado con ChatGPT buscando sonoridad moderna y relación con el rendimiento acuático.</p>
+        <p><strong>Logo (HW):</strong> Generado con IA (DALL·E 3) bajo el concepto de diseño fluido. Representa una onda que evoca movimiento y agua.</p>
+        <hr>
+        <p class="gestion-texto">Gestión: Activos organizados localmente en la carpeta "Natación" y procesados en Canva/HTML para garantizar la jerarquía visual de los botones de compra (CTA).</p>
+    </div>
+
+    <div class="grid-prompts">
+        <div class="card-prompt">
+            <h4>PROMPT 0 – IDENTIDAD VISUAL</h4>
+            <span class="prompt-text">
+                "Diseña un logo minimalista y moderno para una marca de mallas llamada HydroWear. Utiliza el concepto de diseño fluido con una onda que evoque movimiento..."
+            </span>
+            <p class="card-usage"><strong>Uso:</strong> Generación de marca y logo con DALL-E 3 para unificar la identidad visual.</p>
+            <p class="card-credits"><strong>Recursos:</strong> Motor generativo <em>DALL-E 3</em>.</p>
+        </div>
+        <div class="card-prompt">
+            <h4>PROMPT 1 – LÍNEA MUJER</h4>
+            <span class="prompt-text">"Mujer en la playa usando bikini de dos piezas, diseño minimalista, colores vivos, estilo editorial de moda..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Portada principal para representar la línea femenina.</p>
+            <p class="card-credits"><strong>Recursos:</strong> Motor generativo <em>Nano Banana</em>.</p>
+ <br><strong>Tendencia:</strong> Paleta basada en el reporte Verano 2026, combinando tonos base oceánicos con acentos vibrantes .
+        </div>
+<div class="card-prompt">
+            <h4>PROMPT 2 – LÍNEA HOMBRE</h4>
+            <span class="prompt-text">"Hombre caminando por la orilla del mar, malla de color cálido, pose natural, estética deportiva..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Portada principal para representar la línea masculina.</p>
+            <p class="card-credits"><strong>Recursos:</strong> Motor generativo <em>Nano Banana</em>.</p>
+ <br><strong>Tendencia:</strong> Paleta basada en el reporte Verano 2026, combinando tonos base oceánicos con acentos vibrantes.
+        </div>
+
+        <div class="card-prompt">
+            <h4>PROMPT 3 – LÍNEA INFANTIL</h4>
+            <span class="prompt-text">"Niños y niñas jugando en la orilla del mar, mallas infantiles cómodas, paleta azul, celeste y arena..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Sección infantil en la landing page principal.</p>
+            <p class="card-credits"><strong>Recursos:</strong> Motor generativo <em>Nano Banana</em>.</p>
+<br><strong>Tendencia:</strong> Paleta basada en el reporte Verano 2026, combinando tonos base oceánicos con acentos vibrantes.
+        </div>
+
+        <div class="card-prompt">
+            <h4>PROMPT 4 – FAMILIA</h4>
+            <span class="prompt-text">"Familia joven disfrutando en una piscina cristalina, trajes de baño coordinados, luz natural..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Cierre de venta y conversión (Sección Familia).</p>
+            <p class="card-credits"><strong>Recursos:</strong> Motor generativo <em>Nano Banana</em>.</p>
+        </div>
+
+        <div class="card-prompt">
+            <h4>PROMPT 5 – VOZ IA (SPOT)</h4>
+            <span class="prompt-text">"Locutora femenina con acento argentino, tono cálido y profesional, velocidad natural para comercial de indumentaria..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Generación del spot central con Malen (Neural TTS).</p>
+            <p class="card-credits"><strong>Recursos:</strong> <em>Voicemaker AI</em> / <em>Neural TTS</em>.</p>
+        </div>
+<div class="card-prompt">
+    <h4>PROMPT 6 – PORTADA PRINCIPAL NIÑOS</h4>
+    <span class="prompt-text">
+        "niño y niña de aproximadamente 5 años caminando de la mano por la orilla de una playa. Visten trajes de baño infantiles en colores variados, combinando tonos oceánicos y colores vivos. Luz cálida de atardecer, fondo de mar y arena desenfocado, estética veraniega, imagen limpia y profesional"
+    </span>
+    <p class="card-usage">
+        <strong>Uso:</strong> Portada principal para representar la línea infantil.
+    </p>
+    <p class="card-credits">
+        <strong>Recursos:</strong> Generado con <em>Nano Banana</em>.
+ <br><strong>Tendencia:</strong> Paleta basada en el reporte Verano 2026, combinando tonos base oceánicos con acentos vibrantes.
+    </p>
+</div>
+        <div class="card-prompt">
+            <h4>ESTRATEGIA – AUDIO UX</h4>
+            <span class="prompt-text">"Mezcla dinámica: Música de fondo (vol 0.2) + Spot (vol 1.0) con automatización de inicio tras 3 segundos..."</span>
+            <p class="card-usage"><strong>Uso:</strong> Coordinación técnica para una experiencia de usuario profesional.</p>
+           </p>
+    <p class="card-credits">
+        <strong>Recursos:</strong> Música Lo-fi Tropical de <em>Pixabay</em> y voz IA de <em>Voicemaker</em>.
+    </p>
+<p class="card-justification">
+        <strong>Objetivo:</strong> Crear un ambiente inmersivo que invite a la navegación prolongada sin distracciones.
+    </p>
+        </div>
+    </div>
+</section>
+</section>
+
+    </section>
+    </footer>
+<div class="audio-web-pro">
+    <div class="controles-ocultos">
+        <p style="color: black; margin: 0 0 5px 0; font-size: 12px; font-weight: bold;">Música Ambiente</p>
+        <audio id="musicaFondo" src="https://www.dropbox.com/scl/fi/cgua1m3sqfobt4hqbh5im/tu-audio.mp3?rlkey=vbitn8occbc2rzyk03koie0m1&st=rr9x366k&raw=1" loop></audio>
+        <input type="range" id="volMusica" min="0" max="1" step="0.1" value="0.2" style="width: 100%;">
+        
+        <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+        
+        <p style="color: black; margin: 0 0 5px 0; font-size: 12px; font-weight: bold;">Spot Publicitario</p>
+        <audio id="spotVoz" src="https://www.dropbox.com/scl/fi/yy5c1rt9s0tbdytvng452/publicidad.mp3?rlkey=0t4qborcz4mycb4ni2jls9zvc&st=z9em0c6u&raw=1" controls style="width: 100%; height: 30px;"></audio>
+    </div>
+    <button id="botonParlante" class="icono-parlante">🔊</button>
+</div>
+
+<script>
+    const musica = document.getElementById('musicaFondo');
+    const spot = document.getElementById('spotVoz');
+    const btn = document.getElementById('botonParlante');
+    const slider = document.getElementById('volMusica');
+
+    // Valores iniciales según tu documentación
+    musica.volume = 0.2; 
+    spot.volume = 1.0;
+
+    btn.onclick = function() {
+        if (musica.paused) {
+            // 1. Inicia la música de fondo
+            musica.play();
+            btn.innerHTML = "🎶";
+            
+            // 2. Coordinación: El spot arranca 3 segundos después
+            setTimeout(() => {
+                // Solo se reproduce si la música sigue sonando (por si el usuario lo paró antes)
+                if (!musica.paused) {
+                    spot.play();
+                    console.log("Spot publicitario iniciado tras 3 segundos.");
+                }
+            }, 3000); 
+
+        } else {
+            // Pausar ambos y resetear el spot para la próxima vez
+            musica.pause();
+            spot.pause();
+            spot.currentTime = 0;
+            btn.innerHTML = "🔊";
+        }
+    };
+
+    // Control manual del volumen de la música
+    slider.oninput = function() {
+        musica.volume = this.value;
+    };
+</script>
+</body>
+</html>
