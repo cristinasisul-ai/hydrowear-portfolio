@@ -21,22 +21,23 @@
         /* --- HEADER (LOGO) --- */
         header {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 1.5rem 6%;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-        }
+    padding: 1rem 5%;
+    position: absolute; /* O 'fixed' si quieres que te siga al bajar */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
 
-        .logo img {
-            height: 95px;
-            width: auto;
-            object-fit: contain;
-            transition: transform 0.3s;
+     .logo img {
+    height: 250px; /* Aquí es donde le damos el tamaño grande */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s;
         }
        
         .logo img:hover {
@@ -996,7 +997,7 @@ logo img {
 /* SUBTITULO PROYECTO */
 .descripcion-proyecto {
     font-size: 1.4rem !important;
-    color: #555 !important;
+    color: #444444 !important;
     max-width: 600px;
     margin: 0 auto 40px auto !important;
     line-height: 1.6;
@@ -1171,9 +1172,11 @@ logo img {
 <body>
 
     <header>
-        <div class="logo">
-            <img src="https://drive.google.com/thumbnail?id=1L9mIvoRDat6sWF6f6mr9CoaVRHN6wZgr&sz=w1000" alt="HydroWear Logo">
-        </div>
+      <div class="logo">
+    <img src="https://drive.google.com/thumbnail?id=1L9mIvoRDat6sWF6f6mr9CoaVRHN6wZgr&sz=w1000" 
+         alt="HydroWear Logo" 
+         style="height: 180px !important; width: auto !important; display: block;">
+</div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -1386,10 +1389,13 @@ logo img {
 <section id="proceso-ia">
 <h3 class="titulo-seccion-ia">Proceso de Creación con IA y Herramientas Digitales</h3>
 
-<p class="descripcion-proyecto">
-    Este proyecto documenta la integración de IA en el flujo de diseño comercial, desde la conceptualización de marca hasta la <strong>identidad sonora automatizada</strong>.
-</p>
-
+<div class="descripcion-proyecto">
+    <p class="intro-ia">
+        Este proyecto documenta la integración de la <strong>Inteligencia Artificial</strong> en el flujo de diseño comercial, 
+        abarcando desde la conceptualización de la marca y la generación de contenidos visuales, 
+        hasta el desarrollo de una <strong>identidad sonora automatizada</strong>.
+    </p>
+</div>
 <div class="tabla-herramientas">
     <div class="herramienta-item">
         <strong>ChatGPT:</strong> <span>Naming, textos descriptivos y justificación conceptual.</span>
@@ -1410,7 +1416,10 @@ logo img {
         <strong>Voicemaker (Neural IA):</strong> <span>Generación de voz sintética para el spot de audio UX.</span>
     </div>
     <div class="herramienta-item">
-        <strong>Google Drive:</strong> <span>Gestión e inserción de activos (imágenes y audios) mediante IDs.</span>
+        <strong>Google Drive:</strong> <span>Gestión e inserción de activos (imágenes) mediante IDs.</span>
+    </div>
+ <div class="herramienta-item">
+        <strong>Dropbox:</strong> <span>Gestión e inserción de activos (audios) mediante IDs.</span>
     </div>
 </div>
 </section>
@@ -1553,5 +1562,27 @@ logo img {
         musica.volume = this.value;
     };
 </script>
+<section id="conclusion-final" style="padding: 60px 10%; background-color: #f9f9f9; border-top: 1px solid #ddd; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
+        <h2 style="color: #1a2a3a; font-family: serif; letter-spacing: 2px; margin-bottom: 25px;">CONCLUSIÓN</h2>
+        
+        <p style="color: #444; line-height: 1.8; font-size: 1.1rem; text-align: justify; margin-bottom: 15px;">
+            Este proyecto documenta un flujo de trabajo híbrido y consciente. Inicié con una estructura en <strong>Wix</strong>, que luego trasladé a <strong>Canva</strong> para definir la estética visual, culminando en un entorno <strong>HTML</strong> optimizado con la asistencia de <strong>Gemini</strong>. Para la identidad visual, utilicé <strong>DALL-E 3</strong> (vía ChatGPT), <strong>Nano Banana</strong> (Gemini)  para generar imágenes de alta precisión, las cuales fueron alojadas en <strong>Google Drive</strong> e integradas mediante enlaces directos.
+        </p>
+        
+        <p style="color: #444; line-height: 1.8; font-size: 1.1rem; text-align: justify; margin-bottom: 15px;">
+            En el apartado sonoro, seleccioné una pista ambiental de <strong>Pixabay</strong> diseñada para invitar a la exploración sin saturar al usuario. Para el spot publicitario, tras evaluar opciones como ElevenLabs, opté por la versatilidad de <strong>Voicemaker (TTS)</strong> para la voz sintética, alojando todos los archivos de audio en <strong>Dropbox</strong> para su correcta reproducción.
+        </p>
+
+        <p style="color: #444; line-height: 1.8; font-size: 1.1rem; text-align: justify;">
+            Aunque exploré el uso de fotos propias en herramientas como Nano Banana, las limitaciones de las versiones gratuitas me llevaron a perfeccionar la <strong>ingeniería de prompts</strong> para recrear mi visión original. Esta experiencia confirma que la IA es un soporte crítico que potencia la producción cuando existe una intención comunicacional clara.
+        </p>
+
+        <p style="margin-top: 35px; font-weight: bold; color: #1a2a3a; letter-spacing: 1px;">
+            CRISTINA SISUL — PROYECTO FINAL 2026
+        </p>
+    </div>
+</section>
+
 </body>
 </html>
